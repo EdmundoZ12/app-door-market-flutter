@@ -10,7 +10,7 @@ class TopBar extends StatelessWidget {
   final VoidCallback? onCartClick;
 
   const TopBar({
-    Key? key,
+    super.key,
     this.title = 'DoorMarket',
     this.showSearch = true,
     this.showFilters = false,
@@ -18,7 +18,7 @@ class TopBar extends StatelessWidget {
     this.onFilterClick,
     this.onNotificationClick,
     this.onCartClick,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class TopBar extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
+            // ignore: deprecated_member_use
             color: Colors.black.withOpacity(0.1),
             blurRadius: 8,
             offset: const Offset(0, 2),
@@ -73,7 +74,9 @@ class TopBar extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFFE53935), // Color primary, ajusta según tu colors.xml
+                      color: Color(
+                        0xFFE53935,
+                      ), // Color primary, ajusta según tu colors.xml
                     ),
                   ),
                 ],

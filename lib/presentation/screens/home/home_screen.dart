@@ -34,9 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 
           // Contenido scrolleable
-          Expanded(
-            child: const _HomeView(),
-          ),
+          Expanded(child: const _HomeView()),
         ],
       ),
     );
@@ -69,7 +67,6 @@ class _HomeView extends StatelessWidget {
 
           // // Componente 4: Ofertas especiales
           // const OfertasSection(),
-
           const SizedBox(height: 100), // Espacio extra al final
         ],
       ),
