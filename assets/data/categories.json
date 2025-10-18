@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bebidas",
+      "icon": "bebidas",
+      "image": "images/categories/bebidas.png",
+      "productCount": 45
+    },
+    {
+      "id": 2,
+      "name": "Carnes",
+      "icon": "carnes",
+      "image": "images/categories/carnes.png",
+      "productCount": 32
+    },
+    {
+      "id": 3,
+      "name": "Verduras",
+      "icon": "verduras",
+      "image": "images/categories/verduras.png",
+      "productCount": 28
+    },
+    {
+      "id": 4,
+      "name": "Limpieza",
+      "icon": "limpieza",
+      "image": "images/categories/limpieza.png",
+      "productCount": 56
+    },
+    {
+      "id": 5,
+      "name": "Aderezos",
+      "icon": "aderezos",
+      "image": "images/categories/aderezos.png",
+      "productCount": 23
+    }
+  ]
+}
