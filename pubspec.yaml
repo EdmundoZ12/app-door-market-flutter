@@ -54,6 +54,7 @@ flutter:
 
   assets:
     - assets/images/carrusel/
+    - assets/images/
     - assets/data/
   # To add assets to your application, add an assets section, like this:
   # assets:

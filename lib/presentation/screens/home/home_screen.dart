@@ -1,15 +1,44 @@
 import 'package:door_market_app/presentation/components/carrusel_home.dart';
 import 'package:flutter/material.dart';
+import '../../components/top_bar.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
   static const String name = 'home_screen';
-  const HomeScreen({super.key});
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Door Market')),
-      body: const _HomeView(),
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          // TopBar como widget normal, NO como AppBar
+          TopBar(
+            title: 'DoorMarket',
+            showSearch: true,
+            showFilters: false,
+            onSearchClick: () {
+              print('Búsqueda clickeada');
+            },
+            onNotificationClick: () {
+              print('Notificaciones clickeadas');
+            },
+            onCartClick: () {
+              print('Carrito clickeado');
+            },
+          ),
+
+          // Contenido scrolleable
+          Expanded(
+            child: const _HomeView(),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -41,7 +70,7 @@ class _HomeView extends StatelessWidget {
           // // Componente 4: Ofertas especiales
           // const OfertasSection(),
 
-          // const SizedBox(height: 16),
+          const SizedBox(height: 100), // Espacio extra al final
         ],
       ),
     );
