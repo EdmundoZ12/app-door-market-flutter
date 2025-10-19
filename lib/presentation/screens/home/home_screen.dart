@@ -1,5 +1,6 @@
 import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/components/carrusel_home.dart';
+import 'package:door_market_app/presentation/components/categories_section_home.dart';
 import 'package:door_market_app/presentation/components/popular_products_section.dart';
 import 'package:flutter/material.dart';
 
@@ -73,10 +74,9 @@ class _HomeViewState extends State<_HomeView> {
 
           const SizedBox(height: 24),
 
-          // // Componente 2: Sección de categorías
-          // const CategoriasSection(),
+          const CategoriesSectionHome(),
 
-          // const SizedBox(height: 24),
+          const SizedBox(height: 24),
 
           // // Componente 3: Productos destacados
           // const ProductosDestacados(),
@@ -92,8 +92,6 @@ class _HomeViewState extends State<_HomeView> {
             onProductTap: (product) => print('Tapped on ${product.name}'),
             onAddToCart: (product) => print('Add to cart: ${product.name}'),
           ),
-
-          
         ],
       ),
     );
