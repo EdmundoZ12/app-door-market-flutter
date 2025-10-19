@@ -1,0 +1,76 @@
+{
+    "populars": [
+        {
+            "id": 15,
+            "name": "Cebolla",
+            "price": 4,
+            "images": [
+                "assets/images/products/cebolla.jpg",
+                "assets/images/products/cebolla.jpg"
+            ],
+            "categoryId": 3,
+            "description": "Cebollas frescas de sabor intenso, base para múltiples platos.",
+            "popularity": 85
+        },        
+        {
+            "id": 23,
+            "name": "Aji nomoto",
+            "price": 10,
+            "images": [
+                "assets/images/products/ajinomoto.jpg",
+                "assets/images/products/ajinomoto.jpg"
+            ],
+            "categoryId": 5,
+            "description": "Condimento Aji-No-Moto para realzar el sabor de tus comidas.",
+            "popularity": 70
+        },
+        {
+            "id": 24,
+            "name": "Ketchup",
+            "price": 30,
+            "images": [
+                "assets/images/products/ketchup.jpg",
+                "assets/images/products/ketchup.jpg"
+            ],
+            "categoryId": 5,
+            "description": "Salsa ketchup clásica para acompañar tus comidas favoritas.",
+            "popularity": 92
+        },
+        {
+            "id": 25,
+            "name": "Locoto",
+            "price": 10,
+            "images": [
+                "assets/images/products/locoto.jpg",
+                "assets/images/products/locoto.jpg"
+            ],
+            "categoryId": 5,
+            "description": "Locoto fresco picante, ideal para salsas tradicionales.",
+            "popularity": 78
+        },
+        {
+            "id": 26,
+            "name": "Mayonesa",
+            "price": 30,
+            "images": [
+                "assets/images/products/mayoneza.jpg",
+                "assets/images/products/mayoneza.jpg"
+            ],
+            "categoryId": 5,
+            "description": "Mayonesa cremosa para acompañar sándwiches o ensaladas.",
+            "popularity": 90
+        },
+        {
+            "id": 27,
+            "name": "Mostaza",
+            "price": 30,
+            "images": [
+                "assets/images/products/mostaza.jpg",
+                "assets/images/products/mostaza.jpg"
+            ],
+            "categoryId": 5,
+            "description": "Salsa de mostaza con sabor intenso, ideal para carnes y sándwiches.",
+            "popularity": 80
+        }
+    ]
+}

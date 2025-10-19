@@ -54,6 +54,8 @@ flutter:
 
   assets:
     - assets/images/carrusel/
+    - assets/images/products/
+    - assets/images/icons/
     - assets/images/
     - assets/data/
     - assets/images/categories/
