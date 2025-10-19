@@ -1,0 +1,256 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Coca Cola 2LT",
+      "price": 10,
+      "image": "images/products/coca_cola_2lt.png",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Mendocina",
+      "price": 10,
+      "image": "images/products/mendocina.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Simba 2LT",
+      "price": 14,
+      "image": "images/products/simba_2lt.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Fanta 2LT",
+      "price": 13,
+      "image": "images/products/fanta_2lt.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 5,
+      "name": "Powerade",
+      "price": 13,
+      "image": "images/products/poweride.JPG",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "name": "Monster",
+      "price": 13,
+      "image": "images/products/monster.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "name": "Redbull",
+      "price": 13,
+      "image": "images/products/red_bull.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 8,
+      "name": "Pepsi 2LT",
+      "price": 13,
+      "image": "images/products/pepsi_2lts.jpg",
+      "categoryId": 1
+    },
+    {
+      "id": 17,
+      "name": "Camaron",
+      "price": 76,
+      "image": "images/products/camaron.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 18,
+      "name": "Chorizo parrilero",
+      "price": 36,
+      "image": "images/products/chorizo parrilero.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 19,
+      "name": "Costilla",
+      "price": 30,
+      "image": "images/products/costilla.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 20,
+      "name": "Pollo",
+      "price": 22,
+      "image": "images/products/pollo.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 21,
+      "name": "Pescado",
+      "price": 40,
+      "image": "images/products/pescado.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 22,
+      "name": "Mariscos",
+      "price": 44,
+      "image": "images/products/surtido de mariscos.jpg",
+      "categoryId": 2
+    },
+    {
+      "id": 9,
+      "name": "Zanahoria",
+      "price": 3,
+      "image": "images/products/zanahoria.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 10,
+      "name": "Espinaca",
+      "price": 7,
+      "image": "images/products/espinaca.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 11,
+      "name": "Lechuga",
+      "price": 3,
+      "image": "images/products/lechuga.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 12,
+      "name": "Tomate",
+      "price": 4,
+      "image": "images/products/tomate.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 13,
+      "name": "Acelga",
+      "price": 4,
+      "image": "images/products/acelga.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 14,
+      "name": "Remolacha",
+      "price": 4,
+      "image": "images/products/remolacha.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 15,
+      "name": "Cebolla",
+      "price": 4,
+      "image": "images/products/cebolla.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 16,
+      "name": "Papa",
+      "price": 4,
+      "image": "images/products/papa.jpg",
+      "categoryId": 3
+    },
+    {
+      "id": 23,
+      "name": "Aji nomoto",
+      "price": 10,
+      "image": "images/products/ajinomoto.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 24,
+      "name": "ketchup",
+      "price": 30,
+      "image": "images/products/ketchup.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 25,
+      "name": "Locoto",
+      "price": 10,
+      "image": "images/products/locoto.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 26,
+      "name": "Mayonesa",
+      "price": 30,
+      "image": "images/products/mayoneza.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 27,
+      "name": "Mostaza",
+      "price": 30,
+      "image": "images/products/mostaza.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 28,
+      "name": "Pimienta",
+      "price": 10,
+      "image": "images/products/pimienta.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 29,
+      "name": "Salsa soya",
+      "price": 21,
+      "image": "images/products/salsa soya.jpg",
+      "categoryId": 5
+    },
+    {
+      "id": 30,
+      "name": "Afeitador",
+      "price": 8,
+      "image": "images/products/limpieza/afeitador.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": 31,
+      "name": "Ambientador",
+      "price": 27,
+      "image": "images/products/limpieza/ambientador.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": 32,
+      "name": "Cepillo de dientes",
+      "price": 8,
+      "image": "images/products/limpieza/cepillo.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": 33,
+      "name": "Escoba",
+      "price": 33,
+      "image": "images/products/limpieza/escoba.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": 34,
+      "name": "Jaboncillo",
+      "price": 21,
+      "image": "images/products/limpieza/jaboncillo.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": 35,
+      "name": "Lavandina",
+      "price": 21,
+      "image": "images/products/limpieza/lavandina.jpg",
+      "categoryId": 4
+    },
+    {
+      "id": 36,
+      "name": "Deterjente",
+      "price": 21,
+      "image": "images/products/limpieza/patito.jpg",
+      "categoryId": 4
+    }
+  ]
+}

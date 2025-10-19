@@ -1,0 +1,48 @@
+{
+  "orders": [
+    {
+      "id": "ORD-2024-001",
+      "date": "2024-05-20",
+      "total": 23.50,
+      "status": "Entregado",
+      "products": [
+        {
+          "productId": "prod-001",
+          "name": "Coca-Cola 2LT",
+          "quantity": 1,
+          "price": 10.00,
+          "image": "images/productos/coca_cola_2lt.png"
+        },
+        {
+          "productId": "prod-008",
+          "name": "Pepsi 2LT",
+          "quantity": 1,
+          "price": 13.50,
+          "image": "images/productos/pepsi_2lts.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ORD-2024-002",
+      "date": "2024-05-22",
+      "total": 44.00,
+      "status": "En Camino",
+      "products": [
+        {
+          "productId": "prod-020",
+          "name": "Pollo (Kg)",
+          "quantity": 2,
+          "price": 22.00,
+          "image": "images/productos/pollo.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ORD-2024-003",
+      "date": "2024-05-23",
+      "total": 7.00,
+      "status": "Pendiente",
+      "products": []
+    }
+  ]
+}
