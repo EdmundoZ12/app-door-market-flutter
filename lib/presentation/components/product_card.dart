@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../config/theme/app_theme.dart';
 import '../../data/model/product.dart';
 
 class ProductCard extends StatelessWidget {
@@ -19,6 +20,10 @@ class ProductCard extends StatelessWidget {
     final price = product.price;
     final priceLabel =
         price % 1 == 0 ? '${price.toInt()} BS' : '${price.toStringAsFixed(2)} BS';
+    final priceColor = colorList.firstWhere(
+      (color) => color == Colors.deepPurple,
+      orElse: () => Colors.deepPurple,
+    );
 
     const cardWidth = 142.0;
     const cardHeight = 200.0;
@@ -34,13 +39,12 @@ class ProductCard extends StatelessWidget {
             Container(
               width: cardWidth,
               height: cardHeight,
-              padding: const EdgeInsets.fromLTRB(16, 18, 16, 20),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(22),
                 border: Border.all(
-                  color: const Color(0xFFE3E1F6),
-                  width: 1.4,
+                  color: const Color.fromARGB(255, 227, 225, 246),
+                  width: 2.4,
                 ),
                 boxShadow: [
                   BoxShadow(
@@ -57,48 +61,64 @@ class ProductCard extends StatelessWidget {
                 ],
               ),
               child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  SizedBox(
-                    height: 102,
+                  Expanded(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(18),
-                      child: Align(
-                        alignment: Alignment.topCenter,
-                        child: product.primaryImage.isNotEmpty
-                            ? Image.asset(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(22),
+                        topRight: Radius.circular(22),
+                      ),
+                      child: product.primaryImage.isNotEmpty
+                          ? Container(
+                              color: const Color(0xFFF1F1F5),
+                              child: Image.asset(
                                 product.primaryImage,
-                                fit: BoxFit.contain,
-                                width: double.infinity,
+                                fit: BoxFit.cover,
                                 errorBuilder: (context, error, stackTrace) =>
                                     _buildImageFallback(),
-                              )
-                            : _buildImageFallback(),
-                      ),
+                              ),
+                            )
+                          : _buildImageFallback(),
                     ),
                   ),
-                  const SizedBox(height: 12),
-                  Text(
-                    product.name,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF2F2D46),
-                    ),
-                  ),
-                  const Spacer(),
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      priceLabel,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF7A3BFF),
+                  SizedBox(
+                    height: 88,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Align(
+                              alignment: Alignment.topCenter,
+                              child: Text(
+                                product.name,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.1,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Text(
+                              priceLabel,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: priceColor,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -106,8 +126,8 @@ class ProductCard extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 6,
-              right: 8,
+              top: -4,
+              right: -4,
               child: GestureDetector(
                 onTap: onAddToCart,
                 child: Image.asset(
@@ -125,7 +145,10 @@ class ProductCard extends StatelessWidget {
 
   Widget _buildImageFallback() {
     return Container(
-      color: const Color(0xFFF5F5F5),
+      width: double.infinity,
+      height: double.infinity,
+      color: const Color(0xFFF1F1F5),
+      alignment: Alignment.center,
       child: const Icon(
         Icons.image_not_supported_outlined,
         color: Colors.grey,

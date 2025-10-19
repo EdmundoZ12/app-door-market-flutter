@@ -34,15 +34,15 @@ class CategoryProductsSection extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(1),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF3F0FF),
+                    color: const Color(0xFFF2F2F2),
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: Image.asset(
                     category.imagePath,
-                    width: 28,
-                    height: 28,
+                    width: 50,
+                    height: 50,
                     fit: BoxFit.contain,
                     errorBuilder: (context, error, stackTrace) =>
                         const Icon(Icons.category, color: Color(0xFF7A3BFF)),
@@ -55,7 +55,7 @@ class CategoryProductsSection extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF2F2D46),
+                      color: Color.fromARGB(255, 0, 0, 0),
                     ),
                   ),
                 ),

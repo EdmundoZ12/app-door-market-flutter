@@ -34,8 +34,8 @@ class PopularProductsSection extends StatelessWidget {
             children: [
               Image.asset(
                 headerImagePath,
-                width: 36,
-                height: 36,
+                width: 50,
+                height: 50,
                 fit: BoxFit.contain,
                 errorBuilder: (context, error, stackTrace) {
                   return const Icon(
