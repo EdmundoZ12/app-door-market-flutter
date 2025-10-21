@@ -7,6 +7,7 @@ class Product {
     required this.categoryId,
     required this.description,
     required this.popularity,
+    this.onPromotion = false,
   });
 
   final int id;
@@ -16,6 +17,7 @@ class Product {
   final int categoryId;
   final String description;
   final int popularity;
+  final bool onPromotion;
 
   String get primaryImage => images.isNotEmpty ? images.first : '';
 
@@ -32,6 +34,7 @@ class Product {
       categoryId: json['categoryId'] as int,
       description: json['description'] as String? ?? '',
       popularity: json['popularity'] as int? ?? 0,
+      onPromotion: json['onPromotion'] as bool? ?? false,
     );
   }
 }

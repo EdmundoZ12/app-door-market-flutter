@@ -7,7 +7,8 @@
       "images": ["assets/images/products/coca_cola_2lt.png", "assets/images/products/coca_cola_2lt.png"],
       "categoryId": 1,
       "description": "Refresco gaseoso Coca Cola de 2 litros, ideal para compartir.",
-      "popularity": 99
+      "popularity": 99,
+      "onPromotion": true
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "images": ["assets/images/products/mendocina.jpg", "assets/images/products/mendocina.jpg"],
       "categoryId": 1,
       "description": "Gaseosa Mendocina de sabor tradicional, presentación de 2 litros.",
-      "popularity": 87
+      "popularity": 87,
+      "onPromotion": false
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "images": ["assets/images/products/simba_2lt.jpg", "assets/images/products/simba_2lt.jpg"],
       "categoryId": 1,
       "description": "Bebida gaseosa Simba de 2 litros, sabor refrescante.",
-      "popularity": 82
+      "popularity": 82,
+      "onPromotion": true
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "images": ["assets/images/products/fanta_2lt.jpg", "assets/images/products/fanta_2lt.jpg"],
       "categoryId": 1,
       "description": "Refresco Fanta sabor naranja en botella de 2 litros.",
-      "popularity": 93
+      "popularity": 93,
+      "onPromotion": true
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "images": ["assets/images/products/poweride.JPG", "assets/images/products/poweride.JPG"],
       "categoryId": 1,
       "description": "Bebida isotónica Powerade, ideal para rehidratarse después del ejercicio.",
-      "popularity": 85
+      "popularity": 85,
+      "onPromotion": false
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "images": ["assets/images/products/monster.jpg", "assets/images/products/monster.jpg"],
       "categoryId": 1,
       "description": "Bebida energética Monster para un impulso extra de energía.",
-      "popularity": 91
+      "popularity": 91,
+      "onPromotion": true
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "images": ["assets/images/products/red_bull.jpg", "assets/images/products/red_bull.jpg"],
       "categoryId": 1,
       "description": "Bebida energética Red Bull que revitaliza cuerpo y mente.",
-      "popularity": 95
+      "popularity": 95,
+      "onPromotion": false
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "images": ["assets/images/products/pepsi_2lts.jpg", "assets/images/products/pepsi_2lts.jpg"],
       "categoryId": 1,
       "description": "Gaseosa Pepsi de 2 litros con su clásico sabor cola.",
-      "popularity": 96
+      "popularity": 96,
+      "onPromotion": false
     },
     {
       "id": 17,
@@ -79,7 +87,8 @@
       "images": ["assets/images/products/camaron.jpg", "assets/images/products/camaron.jpg"],
       "categoryId": 2,
       "description": "Camarones frescos, perfectos para parrillas o platos de mariscos.",
-      "popularity": 88
+      "popularity": 88,
+      "onPromotion": true
     },
     {
       "id": 18,
@@ -88,7 +97,8 @@
       "images": ["assets/images/products/chorizo parrilero.jpg", "assets/images/products/chorizo parrilero.jpg"],
       "categoryId": 2,
       "description": "Chorizos parrilleros listos para asar, jugosos y sabrosos.",
-      "popularity": 92
+      "popularity": 92,
+      "onPromotion": true
     },
     {
       "id": 19,
@@ -97,7 +107,8 @@
       "images": ["assets/images/products/costilla.jpg", "assets/images/products/costilla.jpg"],
       "categoryId": 2,
       "description": "Costilla de res fresca, ideal para la parrilla o el horno.",
-      "popularity": 89
+      "popularity": 89,
+      "onPromotion": false
     },
     {
       "id": 20,
@@ -106,7 +117,8 @@
       "images": ["assets/images/products/pollo.jpg", "assets/images/products/pollo.jpg"],
       "categoryId": 2,
       "description": "Pollo fresco de granja, listo para cocinar en tus comidas favoritas.",
-      "popularity": 98
+      "popularity": 98,
+      "onPromotion": true
     },
     {
       "id": 21,
@@ -115,7 +127,8 @@
       "images": ["assets/images/products/pescado.jpg", "assets/images/products/pescado.jpg"],
       "categoryId": 2,
       "description": "Filete de pescado fresco, perfecto para freír o preparar al vapor.",
-      "popularity": 84
+      "popularity": 84,
+      "onPromotion": true
     },
     {
       "id": 22,
@@ -124,7 +137,8 @@
       "images": ["assets/images/products/surtido de mariscos.jpg", "assets/images/products/surtido de mariscos.jpg"],
       "categoryId": 2,
       "description": "Surtido de mariscos variados para preparar paellas o sopas.",
-      "popularity": 79
+      "popularity": 79,
+      "onPromotion": false
     },
     {
       "id": 9,
@@ -133,7 +147,8 @@
       "images": ["assets/images/products/zanahoria.jpg", "assets/images/products/zanahoria.jpg"],
       "categoryId": 3,
       "description": "Zanahorias frescas, ricas en vitamina A y perfectas para ensaladas.",
-      "popularity": 88
+      "popularity": 88,
+      "onPromotion": true
     },
     {
       "id": 10,
@@ -142,7 +157,8 @@
       "images": ["assets/images/products/espinaca.jpg", "assets/images/products/espinaca.jpg"],
       "categoryId": 3,
       "description": "Hojas de espinaca frescas, ideales para sopas, ensaladas y guisos.",
-      "popularity": 77
+      "popularity": 77,
+      "onPromotion": false
     },
     {
       "id": 11,
@@ -151,7 +167,8 @@
       "images": ["assets/images/products/lechuga.jpg", "assets/images/products/lechuga.jpg"],
       "categoryId": 3,
       "description": "Lechuga verde fresca, crujiente y lista para tus ensaladas.",
-      "popularity": 85
+      "popularity": 85,
+      "onPromotion": true
     },
     {
       "id": 12,
@@ -160,7 +177,8 @@
       "images": ["assets/images/products/tomate.jpg", "assets/images/products/tomate.jpg"],
       "categoryId": 3,
       "description": "Tomates maduros y jugosos, perfectos para salsas o ensaladas.",
-      "popularity": 94
+      "popularity": 94,
+      "onPromotion": true
     },
     {
       "id": 13,
@@ -169,7 +187,8 @@
       "images": ["assets/images/products/acelga.jpg", "assets/images/products/acelga.jpg"],
       "categoryId": 3,
       "description": "Hojas de acelga frescas, ricas en hierro y vitaminas.",
-      "popularity": 73
+      "popularity": 73,
+      "onPromotion": false
     },
     {
       "id": 14,
@@ -178,7 +197,8 @@
       "images": ["assets/images/products/remolacha.jpg", "assets/images/products/remolacha.jpg"],
       "categoryId": 3,
       "description": "Remolachas frescas, dulces y nutritivas para ensaladas o jugos.",
-      "popularity": 74
+      "popularity": 74,
+      "onPromotion": false
     },
     {
       "id": 15,
@@ -187,7 +207,8 @@
       "images": ["assets/images/products/cebolla.jpg", "assets/images/products/cebolla.jpg"],
       "categoryId": 3,
       "description": "Cebollas frescas de sabor intenso, base para múltiples platos.",
-      "popularity": 97
+      "popularity": 97,
+      "onPromotion": true
     },
     {
       "id": 16,
@@ -196,7 +217,8 @@
       "images": ["assets/images/products/papa.jpg", "assets/images/products/papa.jpg"],
       "categoryId": 3,
       "description": "Papas frescas, versátiles para freír, hervir o preparar al horno.",
-      "popularity": 99
+      "popularity": 99,
+      "onPromotion": false
     },
     {
       "id": 23,
@@ -205,7 +227,8 @@
       "images": ["assets/images/products/ajinomoto.jpg", "assets/images/products/ajinomoto.jpg"],
       "categoryId": 5,
       "description": "Condimento Aji-No-Moto para realzar el sabor de tus comidas.",
-      "popularity": 80
+      "popularity": 80,
+      "onPromotion": true
     },
     {
       "id": 24,
@@ -214,7 +237,8 @@
       "images": ["assets/images/products/ketchup.jpg", "assets/images/products/ketchup.jpg"],
       "categoryId": 5,
       "description": "Salsa ketchup clásica para acompañar tus comidas favoritas.",
-      "popularity": 93
+      "popularity": 93,
+      "onPromotion": true
     },
     {
       "id": 25,
@@ -223,7 +247,8 @@
       "images": ["assets/images/products/locoto.jpg", "assets/images/products/locoto.jpg"],
       "categoryId": 5,
       "description": "Locoto fresco picante, ideal para salsas tradicionales.",
-      "popularity": 90
+      "popularity": 90,
+      "onPromotion": false
     },
     {
       "id": 26,
@@ -232,7 +257,8 @@
       "images": ["assets/images/products/mayoneza.jpg", "assets/images/products/mayoneza.jpg"],
       "categoryId": 5,
       "description": "Mayonesa cremosa para acompañar sándwiches o ensaladas.",
-      "popularity": 94
+      "popularity": 94,
+      "onPromotion": true
     },
     {
       "id": 27,
@@ -241,7 +267,8 @@
       "images": ["assets/images/products/mostaza.jpg", "assets/images/products/mostaza.jpg"],
       "categoryId": 5,
       "description": "Salsa de mostaza con sabor intenso, ideal para carnes y sándwiches.",
-      "popularity": 91
+      "popularity": 91,
+      "onPromotion": true
     },
     {
       "id": 28,
@@ -250,7 +277,8 @@
       "images": ["assets/images/products/pimienta.jpg", "assets/images/products/pimienta.jpg"],
       "categoryId": 5,
       "description": "Pimienta negra molida para dar aroma y sabor a tus comidas.",
-      "popularity": 86
+      "popularity": 86,
+      "onPromotion": false
     },
     {
       "id": 29,
@@ -259,7 +287,8 @@
       "images": ["assets/images/products/salsa soya.jpg", "assets/images/products/salsa soya.jpg"],
       "categoryId": 5,
       "description": "Salsa de soya ideal para sazonar comidas orientales.",
-      "popularity": 78
+      "popularity": 78,
+      "onPromotion": false
     },
     {
       "id": 30,
@@ -268,7 +297,8 @@
       "images": ["assets/images/products/afeitador.jpg", "assets/images/products/afeitador.jpg"],
       "categoryId": 4,
       "description": "Afeitador de alta precisión para un afeitado limpio y cómodo.",
-      "popularity": 70
+      "popularity": 70,
+      "onPromotion": true
     },
     {
       "id": 31,
@@ -277,7 +307,8 @@
       "images": ["assets/images/products/ambientador.jpg", "assets/images/products/ambientador.jpg"],
       "categoryId": 4,
       "description": "Ambientador con fragancia fresca para mantener el hogar perfumado.",
-      "popularity": 76
+      "popularity": 76,
+      "onPromotion": false
     },
     {
       "id": 32,
@@ -286,7 +317,8 @@
       "images": ["assets/images/products/cepillo.jpg", "assets/images/products/cepillo.jpg"],
       "categoryId": 4,
       "description": "Cepillo dental de cerdas suaves para una limpieza completa.",
-      "popularity": 83
+      "popularity": 83,
+      "onPromotion": true
     },
     {
       "id": 33,
@@ -295,7 +327,8 @@
       "images": ["assets/images/products/escoba.jpg", "assets/images/products/escoba.jpg"],
       "categoryId": 4,
       "description": "Escoba resistente ideal para limpieza de pisos interiores.",
-      "popularity": 82
+      "popularity": 82,
+      "onPromotion": true
     },
     {
       "id": 34,
@@ -304,7 +337,8 @@
       "images": ["assets/images/products/jaboncillo.jpg", "assets/images/products/jaboncillo.jpg"],
       "categoryId": 4,
       "description": "Jaboncillo perfumado para el cuidado diario de la piel.",
-      "popularity": 88
+      "popularity": 88,
+      "onPromotion": true
     },
     {
       "id": 35,
@@ -313,7 +347,8 @@
       "images": ["assets/images/products/lavandina.jpg", "assets/images/products/lavandina.jpg"],
       "categoryId": 4,
       "description": "Lavandina desinfectante para limpieza profunda del hogar.",
-      "popularity": 87
+      "popularity": 87,
+      "onPromotion": false
     },
     {
       "id": 36,
@@ -322,7 +357,8 @@
       "images": ["assets/images/products/patito.jpg", "assets/images/products/patito.jpg"],
       "categoryId": 4,
       "description": "Detergente líquido para ropa con poder limpiador y aroma fresco.",
-      "popularity": 90
+      "popularity": 90,
+      "onPromotion": false
     }
   ]
 }
