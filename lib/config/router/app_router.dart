@@ -15,8 +15,8 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: '/',
-              name: PromotionsScreen.name,
-              builder: (context, state) => const PromotionsScreen(),
+              name: HomeScreen.name,
+              builder: (context, state) => const HomeScreen(),
             ),
           ],
         ),
