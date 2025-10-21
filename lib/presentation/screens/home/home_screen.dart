@@ -2,6 +2,8 @@ import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/components/carrusel_home.dart';
 import 'package:door_market_app/presentation/components/popular_products_section.dart';
 import 'package:flutter/material.dart';
+import 'package:door_market_app/presentation/screens/products_detail/product_detail_screen.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../service/product_service.dart';
 import '../../components/top_bar.dart';
@@ -89,11 +91,11 @@ class _HomeViewState extends State<_HomeView> {
             future: _popularProductsFuture,
             title: _popularSectionTitle,
             headerImagePath: _popularSectionImage,
-            onProductTap: (product) => print('Tapped on ${product.name}'),
+            onProductTap: (product) {
+              context.push('/product-detail', extra: product);
+            },
             onAddToCart: (product) => print('Add to cart: ${product.name}'),
           ),
-
-          
         ],
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:door_market_app/presentation/components/menu_footer.dart';
+import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
+import 'package:door_market_app/presentation/screens/products_detail/product_detail_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -17,6 +19,16 @@ final appRouter = GoRouter(
               path: '/',
               name: HomeScreen.name,
               builder: (context, state) => const HomeScreen(),
+              routes: [
+                GoRoute(
+                  path: 'product-detail',
+                  name: 'product-detail-home',
+                  builder: (context, state) {
+                    final product = state.extra as Product;
+                    return ProductDetailScreen(product: product);
+                  },
+                ),
+              ],
             ),
           ],
         ),
@@ -26,6 +38,16 @@ final appRouter = GoRouter(
               path: '/categories',
               name: CategoriesScreen.name,
               builder: (context, state) => const CategoriesScreen(),
+              routes: [
+                GoRoute(
+                  path: 'product-detail',
+                  name: 'product-detail-categories',
+                  builder: (context, state) {
+                    final product = state.extra as Product;
+                    return ProductDetailScreen(product: product);
+                  },
+                ),
+              ],
             ),
           ],
         ),
@@ -61,64 +83,18 @@ final appRouter = GoRouter(
   ],
 );
 
-class ScaffoldWithNavBar extends StatefulWidget {
+class ScaffoldWithNavBar extends StatelessWidget {
   const ScaffoldWithNavBar({required this.navigationShell, super.key});
 
   final StatefulNavigationShell navigationShell;
 
   @override
-  State<ScaffoldWithNavBar> createState() => _ScaffoldWithNavBarState();
-}
-
-class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
-  late PageController _pageController;
-
-  @override
-  void initState() {
-    super.initState();
-    _pageController = PageController(
-      initialPage: widget.navigationShell.currentIndex,
-    );
-  }
-
-  @override
-  void didUpdateWidget(ScaffoldWithNavBar oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (oldWidget.navigationShell.currentIndex !=
-        widget.navigationShell.currentIndex) {
-      _pageController.animateToPage(
-        widget.navigationShell.currentIndex,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
-
-  @override
-  void dispose() {
-    _pageController.dispose();
-    super.dispose();
-  }
-
-  void _onPageChanged(int index) {
-    widget.navigationShell.goBranch(index);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: _onPageChanged,
-        children: const [
-          HomeScreen(),
-          CategoriesScreen(),
-          PromotionsScreen(),
-          OrdersScreen(),
-          ProfileScreen(),
-        ],
-      ),
-      bottomNavigationBar: MenuFooter(navigationShell: widget.navigationShell),
+      body: navigationShell, // Acceso directo a la propiedad
+      bottomNavigationBar: MenuFooter(
+        navigationShell: navigationShell,
+      ), // Acceso directo a la propiedad
     );
   }
 }

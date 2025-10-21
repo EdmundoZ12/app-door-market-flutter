@@ -7,6 +7,7 @@ class Product {
     required this.categoryId,
     required this.description,
     required this.popularity,
+    this.suggestions,
   });
 
   final int id;
@@ -16,11 +17,18 @@ class Product {
   final int categoryId;
   final String description;
   final int popularity;
+  final List<Product>? suggestions;
 
   String get primaryImage => images.isNotEmpty ? images.first : '';
 
   factory Product.fromJson(Map<String, dynamic> json) {
     final List<dynamic> imageList = json['images'] ?? <dynamic>[];
+    List<Product>? suggestionsList;
+    if (json['suggestions'] != null) {
+      suggestionsList = (json['suggestions'] as List)
+          .map((i) => Product.fromJson(i as Map<String, dynamic>))
+          .toList();
+    }
     return Product(
       id: json['id'] as int,
       name: json['name'] as String,
@@ -32,6 +40,7 @@ class Product {
       categoryId: json['categoryId'] as int,
       description: json['description'] as String? ?? '',
       popularity: json['popularity'] as int? ?? 0,
+      suggestions: suggestionsList,
     );
   }
 }

@@ -1,0 +1,36 @@
+{
+  "id": 37,
+  "name": "Coca Cola 2LT",
+  "price": 12.00,
+  "images": [
+    "assets/images/products/coca_cola_2lt.png"
+  ],
+  "categoryId": 1,
+  "description": "Disfruta del increíble sabor de Coca-Cola, ahora en su presentación de 3 litros. La misma sensación refrescante y deliciosa de la Coca-Cola clásica, pero sin azúcar. Perfecta para compartir en reuniones familiares, con amigos o para disfrutar en cualquier momento del día.",
+  "suggestions": [
+    {
+      "id": 1,
+      "name": "Coca Cola 2LT",
+      "price": 10.00,
+      "images": ["assets/images/products/coca_cola_2lt.png"]
+    },
+    {
+      "id": 4,
+      "name": "Fanta 2LT",
+      "price": 13.00,
+      "images": ["assets/images/products/fanta_2lt.jpg"]
+    },
+    {
+      "id": 8,
+      "name": "Pepsi 2LT",
+      "price": 13.00,
+      "images": ["assets/images/products/pepsi_2lts.jpg"]
+    },
+    {
+      "id": 24,
+      "name": "Ketchup",
+      "price": 30.00,
+      "images": ["assets/images/products/ketchup.jpg"]
+    }
+  ]
+}
