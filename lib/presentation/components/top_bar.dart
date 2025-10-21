@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class TopBar extends StatelessWidget {
   final String title;
@@ -172,7 +173,10 @@ class TopBar extends StatelessWidget {
 
                       // Carrito
                       IconButton(
-                        onPressed: onCartClick,
+                        onPressed:
+                            onCartClick ??
+                            // Acción por defecto si onCartClick es nulo
+                            () => context.push('/cart'),
                         icon: const Icon(
                           Icons.shopping_cart,
                           color: Color(0xFFE53935), // Color primary

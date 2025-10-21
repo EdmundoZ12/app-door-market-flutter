@@ -3,6 +3,7 @@ import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:door_market_app/presentation/screens/products_detail/product_detail_screen.dart';
+import 'package:door_market_app/presentation/screens/cart/cart_screen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -79,6 +80,11 @@ final appRouter = GoRouter(
           ],
         ),
       ],
+    ),
+    GoRoute(
+      path: '/cart',
+      name: CartScreen.name,
+      builder: (context, state) => const CartScreen(),
     ),
   ],
 );

@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import '../../../data/model/product.dart';
 import '../../components/product_card.dart';
+import '../../../service/cart_service.dart';
 
 // --- Pantalla Principal ---
 class ProductDetailScreen extends StatefulWidget {
@@ -16,6 +17,7 @@ class ProductDetailScreen extends StatefulWidget {
 }
 
 class _ProductDetailScreenState extends State<ProductDetailScreen> {
+  final CartService _cartService = CartService();
   // Lista de sugerencias por defecto si el producto no tiene las suyas.
   List<Product>? _defaultSuggestions;
   int _quantity = 1;
@@ -114,7 +116,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       backgroundColor: Colors.white,
       elevation: 0,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back, color: Colors.black),
+        icon: const Icon(Icons.arrow_back, color: Color(0xFFE53935)),
         onPressed: () => Navigator.of(context).pop(),
       ),
       title: Container(
@@ -126,7 +128,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         child: const TextField(
           decoration: InputDecoration(
             hintText: 'Buscar...',
-            prefixIcon: Icon(Icons.search, color: Colors.grey),
+            prefixIcon: Icon(Icons.search, color: Color(0xFFE53935)),
             border: InputBorder.none,
             contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           ),
@@ -134,12 +136,12 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.notifications_none, color: Colors.black),
+          icon: const Icon(Icons.notifications_none, color: Color(0xFFE53935)),
           onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.shopping_cart_outlined, color: Colors.black),
-          onPressed: () {},
+          icon: const Icon(Icons.shopping_cart_outlined, color: Color(0xFFE53935)),
+          onPressed: () => context.push('/cart'),
         ),
       ],
     );
@@ -296,7 +298,15 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
         // Botón de añadir al carrito
         ElevatedButton.icon(
           onPressed: () {
-            // Lógica para añadir al carrito
+            _cartService.addProduct(widget.product, _quantity);
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text(
+                  '$_quantity ${widget.product.name} añadido(s) al carrito',
+                ),
+                duration: const Duration(seconds: 2),
+              ),
+            );
           },
           icon: const Icon(Icons.add_shopping_cart),
           label: const Text('Añadir'),
