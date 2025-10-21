@@ -1,0 +1,85 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "orderNumber": "ORD-2025-001",
+      "date": "2025-10-15",
+      "status": "entregado",
+      "total": 156,
+      "items": [
+        {
+          "productId": 1,
+          "productName": "Coca Cola 2LT",
+          "quantity": 2,
+          "price": 10,
+          "image": "assets/images/products/coca_cola_2lt.png"
+        },
+        {
+          "productId": 20,
+          "productName": "Pollo",
+          "quantity": 3,
+          "price": 22,
+          "image": "assets/images/products/pollo.jpg"
+        },
+        {
+          "productId": 12,
+          "productName": "Tomate",
+          "quantity": 4,
+          "price": 4,
+          "image": "assets/images/products/tomate.jpg"
+        },
+        {
+          "productId": 26,
+          "productName": "Mayonesa",
+          "quantity": 2,
+          "price": 30,
+          "image": "assets/images/products/mayoneza.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "orderNumber": "ORD-2025-002",
+      "date": "2025-10-18",
+      "status": "en camino",
+      "total": 243,
+      "items": [
+        {
+          "productId": 7,
+          "productName": "Redbull",
+          "quantity": 3,
+          "price": 13,
+          "image": "assets/images/products/red_bull.jpg"
+        },
+        {
+          "productId": 18,
+          "productName": "Chorizo parrilero",
+          "quantity": 4,
+          "price": 36,
+          "image": "assets/images/products/chorizo parrilero.jpg"
+        },
+        {
+          "productId": 16,
+          "productName": "Papa",
+          "quantity": 5,
+          "price": 4,
+          "image": "assets/images/products/papa.jpg"
+        },
+        {
+          "productId": 24,
+          "productName": "Ketchup",
+          "quantity": 1,
+          "price": 30,
+          "image": "assets/images/products/ketchup.jpg"
+        },
+        {
+          "productId": 35,
+          "productName": "Lavandina",
+          "quantity": 2,
+          "price": 21,
+          "image": "assets/images/products/lavandina.jpg"
+        }
+      ]
+    }
+  ]
+}

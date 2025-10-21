@@ -1,6 +1,7 @@
 import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/components/carrusel_home.dart';
 import 'package:door_market_app/presentation/components/categories_section_home.dart';
+import 'package:door_market_app/presentation/components/lasts_orders_section_home.dart';
 import 'package:door_market_app/presentation/components/popular_products_section.dart';
 import 'package:flutter/material.dart';
 
@@ -79,9 +80,9 @@ class _HomeViewState extends State<_HomeView> {
           const SizedBox(height: 24),
 
           // // Componente 3: Productos destacados
-          // const ProductosDestacados(),
+          const LastOrdersSection(),
 
-          // const SizedBox(height: 24),
+          const SizedBox(height: 24),
 
           // // Componente 4: Ofertas especiales
           // const OfertasSection(),
