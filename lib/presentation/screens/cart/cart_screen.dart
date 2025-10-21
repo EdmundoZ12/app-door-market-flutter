@@ -283,7 +283,7 @@ class _CartScreenState extends State<CartScreen> {
       child: ElevatedButton(
         onPressed: () {
           // Lógica para realizar el pedido
-          print('Pedido realizado!');
+          context.push('/checkout');
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(
