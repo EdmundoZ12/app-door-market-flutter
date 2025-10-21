@@ -1,0 +1,169 @@
+[
+  {
+    "id": 1,
+    "state": "En camino",
+    "date": "2024-05-01",
+    "products": [
+      { "id": 1, "quantity": 2 },
+      { "id": 24, "quantity": 1 },
+      { "id": 31, "quantity": 1 }
+    ],
+    "total": 77.00
+  },
+  {
+    "id": 2,
+    "state": "Entregado",
+    "date": "2024-05-03",
+    "products": [
+      { "id": 4, "quantity": 1 },
+      { "id": 18, "quantity": 2 },
+      { "id": 9, "quantity": 3 }
+    ],
+    "total": 94.00
+  },
+  {
+    "id": 3,
+    "state": "Cancelado",
+    "date": "2024-05-05",
+    "products": [
+      { "id": 17, "quantity": 1 },
+      { "id": 30, "quantity": 2 }
+    ],
+    "total": 92.00
+  },
+  {
+    "id": 4,
+    "state": "Entregado",
+    "date": "2024-05-08",
+    "products": [
+      { "id": 20, "quantity": 2 },
+      { "id": 25, "quantity": 1 },
+      { "id": 33, "quantity": 1 }
+    ],
+    "total": 87.00
+  },
+  {
+    "id": 5,
+    "state": "En camino",
+    "date": "2024-05-10",
+    "products": [
+      { "id": 3, "quantity": 1 },
+      { "id": 7, "quantity": 2 },
+      { "id": 12, "quantity": 5 }
+    ],
+    "total": 60.00
+  },
+  {
+    "id": 6,
+    "state": "Entregado",
+    "date": "2024-05-12",
+    "products": [
+      { "id": 8, "quantity": 2 },
+      { "id": 19, "quantity": 1 },
+      { "id": 29, "quantity": 1 }
+    ],
+    "total": 77.00
+  },
+  {
+    "id": 7,
+    "state": "Cancelado",
+    "date": "2024-05-14",
+    "products": [
+      { "id": 15, "quantity": 4 },
+      { "id": 35, "quantity": 2 }
+    ],
+    "total": 58.00
+  },
+  {
+    "id": 8,
+    "state": "En camino",
+    "date": "2024-05-16",
+    "products": [
+      { "id": 5, "quantity": 1 },
+      { "id": 11, "quantity": 2 },
+      { "id": 21, "quantity": 1 },
+      { "id": 34, "quantity": 1 }
+    ],
+    "total": 80.00
+  },
+  {
+    "id": 9,
+    "state": "Entregado",
+    "date": "2024-05-18",
+    "products": [
+      { "id": 2, "quantity": 3 },
+      { "id": 22, "quantity": 1 },
+      { "id": 26, "quantity": 1 }
+    ],
+    "total": 104.00
+  },
+  {
+    "id": 10,
+    "state": "Cancelado",
+    "date": "2024-05-20",
+    "products": [
+      { "id": 23, "quantity": 2 },
+      { "id": 30, "quantity": 1 },
+      { "id": 32, "quantity": 3 },
+      { "id": 36, "quantity": 1 }
+    ],
+    "total": 73.00
+  },
+  {
+    "id": 11,
+    "state": "En camino",
+    "date": "2024-05-22",
+    "products": [
+      { "id": 6, "quantity": 2 },
+      { "id": 14, "quantity": 2 },
+      { "id": 27, "quantity": 1 }
+    ],
+    "total": 64.00
+  },
+  {
+    "id": 12,
+    "state": "Entregado",
+    "date": "2024-05-24",
+    "products": [
+      { "id": 1, "quantity": 1 },
+      { "id": 10, "quantity": 4 },
+      { "id": 18, "quantity": 1 },
+      { "id": 28, "quantity": 1 }
+    ],
+    "total": 84.00
+  },
+  {
+    "id": 13,
+    "state": "En camino",
+    "date": "2024-05-26",
+    "products": [
+      { "id": 31, "quantity": 1 },
+      { "id": 21, "quantity": 2 },
+      { "id": 33, "quantity": 1 }
+    ],
+    "total": 140.00
+  },
+  {
+    "id": 14,
+    "state": "Cancelado",
+    "date": "2024-05-28",
+    "products": [
+      { "id": 24, "quantity": 1 },
+      { "id": 29, "quantity": 2 },
+      { "id": 34, "quantity": 2 }
+    ],
+    "total": 114.00
+  },
+  {
+    "id": 15,
+    "state": "Entregado",
+    "date": "2024-05-30",
+    "products": [
+      { "id": 7, "quantity": 1 },
+      { "id": 16, "quantity": 5 },
+      { "id": 20, "quantity": 1 },
+      { "id": 30, "quantity": 2 }
+    ],
+    "total": 71.00
+  }
+]
