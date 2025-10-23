@@ -1,23 +1,23 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import '../data/model/cart_item.dart';
+import '../data/model/order_item.dart';
 
-class CartService {
-  const CartService();
+class OrderItemService {
+  const OrderItemService();
 
   // Cargar items del carrito desde JSON
-  Future<List<CartItem>> fetchCartItems() async {
+  Future<List<OrderItem>> fetchCartItems() async {
     try {
       final String jsonString = await rootBundle.loadString(
-        'assets/data/cart_items.json',
+        'assets/data/order_items.json',
       );
       final Map<String, dynamic> data =
           json.decode(jsonString) as Map<String, dynamic>;
-      final List<dynamic> itemsList = data['cartItems'] ?? <dynamic>[];
+      final List<dynamic> itemsList = data['orderItems'] ?? <dynamic>[];
 
       return itemsList
           .whereType<Map<String, dynamic>>()
-          .map(CartItem.fromJson)
+          .map(OrderItem.fromJson)
           .toList();
     } catch (e) {
       print('Error loading cart items: $e');
@@ -26,12 +26,12 @@ class CartService {
   }
 
   // Calcular subtotal
-  double calculateSubtotal(List<CartItem> items) {
+  double calculateSubtotal(List<OrderItem> items) {
     return items.fold(0.0, (sum, item) => sum + item.totalPrice);
   }
 
   // Contar total de items
-  int getTotalItemsCount(List<CartItem> items) {
+  int getTotalItemsCount(List<OrderItem> items) {
     return items.fold(0, (sum, item) => sum + item.quantity);
   }
 

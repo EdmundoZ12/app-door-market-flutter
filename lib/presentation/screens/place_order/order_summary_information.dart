@@ -27,10 +27,10 @@ class _OrderSummaryInformationState extends State<OrderSummaryInformation> {
 
   Future<void> _loadCartItems() async {
     final String response = await rootBundle.loadString(
-      'assets/data/cart_items.json',
+      'assets/data/order_items.json',
     );
     final data = json.decode(response);
-    final items = data['cartItems'] as List<dynamic>;
+    final items = data['OrderItems'] as List<dynamic>;
     setState(() {
       cartItems = items.map((e) => Map<String, dynamic>.from(e)).toList();
       subtotal = cartItems.fold(

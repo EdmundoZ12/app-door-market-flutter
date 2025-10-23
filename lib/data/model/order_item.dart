@@ -1,5 +1,5 @@
-class CartItem {
-  CartItem({
+class OrderItem {
+  OrderItem({
     required this.productId,
     required this.name,
     required this.description,
@@ -17,8 +17,8 @@ class CartItem {
 
   double get totalPrice => unitPrice * quantity;
 
-  factory CartItem.fromJson(Map<String, dynamic> json) {
-    return CartItem(
+  factory OrderItem.fromJson(Map<String, dynamic> json) {
+    return OrderItem(
       productId: json['productId'] as int,
       name: json['name'] as String,
       description: json['description'] as String? ?? '',
@@ -40,7 +40,7 @@ class CartItem {
   }
 
   // Copiar con cambios
-  CartItem copyWith({
+  OrderItem copyWith({
     int? productId,
     String? name,
     String? description,
@@ -48,7 +48,7 @@ class CartItem {
     double? unitPrice,
     String? image,
   }) {
-    return CartItem(
+    return OrderItem(
       productId: productId ?? this.productId,
       name: name ?? this.name,
       description: description ?? this.description,
