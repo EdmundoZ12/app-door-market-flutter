@@ -28,7 +28,7 @@ class LastOrderScreen extends StatelessWidget {
               showSearch: false,
               showFilters: false,
               showNotifications: false,
-              showCartIcon: false,
+              showCart: false,
             ),
             Expanded(
               child: Padding(
