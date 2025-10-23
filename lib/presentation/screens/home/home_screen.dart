@@ -1,16 +1,21 @@
+import 'package:door_market_app/data/model/last_order.dart';
 import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/components/carrusel_home.dart';
 import 'package:door_market_app/presentation/components/categories_section_home.dart';
 import 'package:door_market_app/presentation/components/lasts_orders_section_home.dart';
 import 'package:door_market_app/presentation/components/popular_products_section.dart';
+import 'package:door_market_app/presentation/screens/last_order/last_order_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../service/product_service.dart';
 import '../../components/top_bar.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key, this.navigationShell}) : super(key: key);
   static const String name = 'home_screen';
+
+  final StatefulNavigationShell? navigationShell;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -40,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 
           // Contenido scrolleable
-          Expanded(child: _HomeView()),
+          Expanded(child: _HomeView(navigationShell: widget.navigationShell)),
         ],
       ),
     );
@@ -48,6 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class _HomeView extends StatefulWidget {
+  const _HomeView({this.navigationShell});
+
+  final StatefulNavigationShell? navigationShell;
+
   @override
   State<_HomeView> createState() => _HomeViewState();
 }
@@ -80,7 +89,7 @@ class _HomeViewState extends State<_HomeView> {
           const SizedBox(height: 24),
 
           // // Componente 3: Productos destacados
-          const LastOrdersSection(),
+          LastOrdersSection(onRepeatOrder: _handleRepeatOrder),
 
           const SizedBox(height: 24),
 
@@ -94,6 +103,17 @@ class _HomeViewState extends State<_HomeView> {
             onAddToCart: (product) => print('Add to cart: ${product.name}'),
           ),
         ],
+      ),
+    );
+  }
+
+  void _handleRepeatOrder(LastOrder order) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => LastOrderScreen(
+          navigationShell: widget.navigationShell,
+          order: order,
+        ),
       ),
     );
   }

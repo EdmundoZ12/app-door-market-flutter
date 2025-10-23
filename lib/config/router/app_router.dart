@@ -110,12 +110,12 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
       body: PageView(
         controller: _pageController,
         onPageChanged: _onPageChanged,
-        children: const [
-          HomeScreen(),
-          CategoriesScreen(),
-          PromotionsScreen(),
-          OrdersScreen(),
-          ProfileScreen(),
+        children: [
+          HomeScreen(navigationShell: widget.navigationShell),
+          const CategoriesScreen(),
+          const PromotionsScreen(),
+          const OrdersScreen(),
+          const ProfileScreen(),
         ],
       ),
       bottomNavigationBar: MenuFooter(navigationShell: widget.navigationShell),
