@@ -1,11 +1,14 @@
 import 'package:door_market_app/presentation/components/menu_footer.dart';
 import 'package:door_market_app/presentation/screens/screens.dart';
+import 'package:door_market_app/presentation/screens/delivery_status/delivery_status_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
   initialLocation: '/',
+  //initialLocation: '/delivery-status',
   routes: [
+    // --- Rutas con Bottom Navigation Bar ---
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         return ScaffoldWithNavBar(navigationShell: navigationShell);
@@ -57,6 +60,13 @@ final appRouter = GoRouter(
           ],
         ),
       ],
+    ),
+
+    // --- Rutas sin Bottom Navigation Bar ---
+    GoRoute(
+      path: '/delivery-status',
+      name: DeliveryStatusScreen.name,
+      builder: (context, state) => const DeliveryStatusScreen(),
     ),
   ],
 );
