@@ -57,7 +57,7 @@ class OrderCompletedScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                 ),
                 onPressed: () {
-                  context.go('/');
+                  context.go('/delivery-status');
                 },
                 child: const Text('Finalizar', style: TextStyle(color: Colors.white)),
               ),

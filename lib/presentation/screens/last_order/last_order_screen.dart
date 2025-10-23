@@ -110,7 +110,9 @@ class LastOrderScreen extends StatelessWidget {
                                 maxWidth: 220,
                               ),
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  context.push('/place-order');
+                                },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: const Color(0xFFE53935),
                                   padding: const EdgeInsets.symmetric(

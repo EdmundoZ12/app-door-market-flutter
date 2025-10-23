@@ -4,6 +4,7 @@ import 'package:door_market_app/data/model/cart_item.dart';
 import 'package:door_market_app/presentation/components/product_cart.dart';
 import 'package:door_market_app/service/cart_service.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 const double _kCartPanelWidth = 300;
 const double _kPanelVerticalOffset = 44;
@@ -298,9 +299,9 @@ class _CartPanel extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () => onCheckout?.call(),
+              onPressed: () => context.push('/place-order'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF673AB7),
+                backgroundColor: const Color(0xFFE53935),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(24),
                 ),

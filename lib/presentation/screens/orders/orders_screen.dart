@@ -1,6 +1,9 @@
+import 'package:door_market_app/data/model/last_order.dart';
 import 'package:door_market_app/data/model/order.dart';
 import 'package:door_market_app/presentation/components/orders_list.dart';
 import 'package:door_market_app/presentation/components/top_bar.dart';
+import 'package:door_market_app/presentation/screens/last_order/last_order_screen.dart';
+import 'package:door_market_app/service/last_order_service.dart';
 import 'package:door_market_app/service/order_service.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +18,7 @@ class OrdersScreen extends StatefulWidget {
 
 class _OrdersScreenState extends State<OrdersScreen> {
   final OrderService _orderService = const OrderService();
+  final LastOrderService _lastOrderService = const LastOrderService();
 
   static const List<String> _statusOptions = <String>[
     'Todos',
@@ -26,11 +30,25 @@ class _OrdersScreenState extends State<OrdersScreen> {
   String _selectedStatus = _statusOptions.first;
   DateTime? _selectedDate;
   late Future<List<Order>> _ordersFuture;
+  LastOrder? _repeatTemplate;
 
   @override
   void initState() {
     super.initState();
     _ordersFuture = _orderService.fetchOrders();
+    _loadRepeatTemplate();
+  }
+
+  Future<void> _loadRepeatTemplate() async {
+    try {
+      final list = await _lastOrderService.fetchLastOrders();
+      if (!mounted) return;
+      setState(() {
+        _repeatTemplate = list.isNotEmpty ? list.first : null;
+      });
+    } catch (_) {
+      // Ignoramos errores silenciosamente ya que es opcional.
+    }
   }
 
   String _dateLabel(BuildContext context) {
@@ -207,14 +225,27 @@ class _OrdersScreenState extends State<OrdersScreen> {
                   orders: filteredOrders,
                   onOrderView: (order) =>
                       debugPrint('Ver detalles de pedido ${order.id}'),
-                  onOrderRepeat: (order) =>
-                      debugPrint('Repetir pedido ${order.id}'),
+                  onOrderRepeat: (_) => _handleRepeatOrder(context),
                 );
               },
             ),
           ),
         ],
       ),
+    );
+  }
+
+  void _handleRepeatOrder(BuildContext context) {
+    final template = _repeatTemplate;
+    if (template == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('No hay pedidos recientes para repetir.')),
+      );
+      return;
+    }
+
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => LastOrderScreen(order: template)),
     );
   }
 }
