@@ -1,0 +1,68 @@
+{
+    "cart-item": [
+        {
+            "product": {
+                "id": 2,
+                "name": "Mendocina",
+                "price": 10,
+                "images": [
+                    "assets/images/products/mendocina.jpg",
+                    "assets/images/products/mendocina.jpg"
+                ],
+                "categoryId": 1,
+                "description": "Gaseosa Mendocina de sabor tradicional, presentación de 2 litros.",
+                "popularity": 87,
+                "onPromotion": false
+            },
+            "quantity": 2
+        },
+        {
+            "product": {
+                "id": 17,
+                "name": "Camaron",
+                "price": 76,
+                "images": [
+                    "assets/images/products/camaron.jpg",
+                    "assets/images/products/camaron.jpg"
+                ],
+                "categoryId": 2,
+                "description": "Camarones frescos, perfectos para parrillas o platos de mariscos.",
+                "popularity": 88,
+                "onPromotion": true
+            },
+            "quantity": 1
+        },
+        {
+            "product": {
+                "id": 26,
+                "name": "Mayonesa",
+                "price": 30,
+                "images": [
+                    "assets/images/products/mayoneza.jpg",
+                    "assets/images/products/mayoneza.jpg"
+                ],
+                "categoryId": 5,
+                "description": "Mayonesa cremosa para acompañar sándwiches o ensaladas.",
+                "popularity": 94,
+                "onPromotion": true
+            },
+            "quantity": 3
+        },
+        {
+            "product": {
+                "id": 33,
+                "name": "Escoba",
+                "price": 33,
+                "images": [
+                    "assets/images/products/escoba.jpg",
+                    "assets/images/products/escoba.jpg"
+                ],
+                "categoryId": 4,
+                "description": "Escoba resistente ideal para limpieza de pisos interiores.",
+                "popularity": 82,
+                "onPromotion": true
+            },
+            "quantity": 1
+        }
+    ]
+}

@@ -1,3 +1,4 @@
+import 'package:door_market_app/presentation/components/cart.dart';
 import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget {
@@ -170,19 +171,9 @@ class TopBar extends StatelessWidget {
                         ),
                       ),
 
-                      // Carrito
-                      IconButton(
-                        onPressed: onCartClick,
-                        icon: const Icon(
-                          Icons.shopping_cart,
-                          color: Color(0xFFE53935), // Color primary
-                          size: 26,
-                        ),
-                        padding: EdgeInsets.zero,
-                        constraints: const BoxConstraints(
-                          minWidth: 40,
-                          minHeight: 40,
-                        ),
+                      Cart(
+                        cartAssetPath: 'assets/data/cart.json',
+                        onCheckout: onCartClick,
                       ),
                     ],
                   ),
