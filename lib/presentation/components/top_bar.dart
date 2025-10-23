@@ -8,6 +8,7 @@ class TopBar extends StatelessWidget {
   // Nuevas propiedades para controlar la visibilidad de Notificación y Carrito
   final bool showNotifications;
   final bool showCart;
+  final CartController? cartController;
 
   final VoidCallback? onSearchClick;
   final VoidCallback? onFilterClick;
@@ -22,6 +23,7 @@ class TopBar extends StatelessWidget {
     // Asignamos 'true' por defecto a las nuevas propiedades
     this.showNotifications = true,
     this.showCart = true,
+    this.cartController,
     this.onSearchClick,
     this.onFilterClick,
     this.onNotificationClick,
@@ -181,18 +183,10 @@ class TopBar extends StatelessWidget {
 
                       // Carrito (ahora condicional)
                       if (showCart)
-                        IconButton(
-                          onPressed: onCartClick,
-                          icon: const Icon(
-                            Icons.shopping_cart,
-                            color: Color(0xFFE53935), // Color primary
-                            size: 26,
-                          ),
-                          padding: EdgeInsets.zero,
-                          constraints: const BoxConstraints(
-                            minWidth: 40,
-                            minHeight: 40,
-                          ),
+                        Cart(
+                          cartAssetPath: 'assets/data/cart.json',
+                          onCheckout: onCartClick,
+                          controller: cartController,
                         ),
                     ],
                   ),

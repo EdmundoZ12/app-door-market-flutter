@@ -7,7 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/place-order', // 👈 Cambia esto temporalmente para probar
+  initialLocation: '/', //  Cambia esto temporalmente para probar
   routes: [
     // 👇 RUTA INDEPENDIENTE - Sin menú inferior
     GoRoute(
@@ -131,7 +131,7 @@ class _ScaffoldWithNavBarState extends State<ScaffoldWithNavBar> {
         onPageChanged: _onPageChanged,
         children: [
           HomeScreen(navigationShell: widget.navigationShell),
-          const CategoriesScreen(),
+          CategoriesScreen(navigationShell: widget.navigationShell),
           const PromotionsScreen(),
           const OrdersScreen(),
           const ProfileScreen(),

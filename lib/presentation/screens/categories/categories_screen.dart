@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../components/carrusel_home.dart';
 import '../../components/category_products_section.dart';
@@ -7,10 +8,13 @@ import '../../../data/model/category.dart';
 import '../../../data/model/product.dart';
 import '../../../service/category_service.dart';
 import '../../../service/product_service.dart';
+import '../product_information/product_information_screen.dart';
 
 class CategoriesScreen extends StatefulWidget {
   static const String name = 'categories_screen';
-  const CategoriesScreen({super.key});
+  const CategoriesScreen({super.key, this.navigationShell});
+
+  final StatefulNavigationShell? navigationShell;
 
   @override
   State<CategoriesScreen> createState() => _CategoriesScreenState();
@@ -43,14 +47,28 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
     }
 
     for (final productsInCategory in groupedProducts.values) {
-      productsInCategory.sort(
-        (a, b) => b.popularity.compareTo(a.popularity),
-      );
+      productsInCategory.sort((a, b) => b.popularity.compareTo(a.popularity));
     }
 
     return _CategoriesContent(
       categories: categories,
       productsByCategory: groupedProducts,
+    );
+  }
+
+  void _openProductDetail(
+    BuildContext context,
+    Product product,
+    String categoryName,
+  ) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => ProductInformationScreen(
+          product: product,
+          navigationShell: widget.navigationShell,
+          categoryName: categoryName,
+        ),
+      ),
     );
   }
 
@@ -89,7 +107,9 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 final data = snapshot.data;
                 if (data == null || data.categories.isEmpty) {
                   return const Center(
-                    child: Text('No hay categorías disponibles por el momento.'),
+                    child: Text(
+                      'No hay categorías disponibles por el momento.',
+                    ),
                   );
                 }
 
@@ -105,8 +125,11 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                           category: category,
                           products:
                               data.productsByCategory[category.id] ?? const [],
-                          onProductTap: (product) =>
-                              print('Tapped on ${product.name}'),
+                          onProductTap: (product) => _openProductDetail(
+                            context,
+                            product,
+                            category.name,
+                          ),
                           onAddToCart: (product) =>
                               print('Add to cart: ${product.name}'),
                         ),

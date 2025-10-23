@@ -1,5 +1,7 @@
+import 'package:door_market_app/data/model/product.dart';
 import 'package:door_market_app/presentation/components/promotions_section.dart';
 import 'package:door_market_app/presentation/components/top_bar.dart';
+import 'package:door_market_app/presentation/screens/product_information/product_information_screen.dart';
 import 'package:flutter/material.dart';
 
 class PromotionsScreen extends StatefulWidget {
@@ -54,9 +56,19 @@ class _PromotionsViewState extends State<_PromotionsView> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Componente 1: Carrusel
-          const PromotionsSection(),
+          PromotionsSection(
+            onProductTap: (product) => _openProductDetail(context, product),
+          ),
         ],
       ),
     );
   }
+}
+
+void _openProductDetail(BuildContext context, Product product) {
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      builder: (context) => ProductInformationScreen(product: product),
+    ),
+  );
 }

@@ -9,15 +9,35 @@ const double _kCartPanelWidth = 300;
 const double _kPanelVerticalOffset = 44;
 const double _kTriggerWidth = 40;
 
+class CartController {
+  VoidCallback? _toggle;
+
+  void _attach(VoidCallback toggle) {
+    _toggle = toggle;
+  }
+
+  void _detach(VoidCallback toggle) {
+    if (_toggle == toggle) {
+      _toggle = null;
+    }
+  }
+
+  void toggle() {
+    _toggle?.call();
+  }
+}
+
 class Cart extends StatefulWidget {
   const Cart({
     super.key,
     this.cartAssetPath = 'assets/data/cart.json',
     this.onCheckout,
+    this.controller,
   });
 
   final String cartAssetPath;
   final VoidCallback? onCheckout;
+  final CartController? controller;
 
   @override
   State<Cart> createState() => _CartState();
@@ -41,6 +61,7 @@ class _CartState extends State<Cart> {
     super.initState();
     _cartService = CartService(assetPath: widget.cartAssetPath);
     _loadCart();
+    widget.controller?._attach(_toggleCart);
   }
 
   @override
@@ -50,12 +71,17 @@ class _CartState extends State<Cart> {
       _cartService = CartService(assetPath: widget.cartAssetPath);
       _loadCart();
     }
+    if (oldWidget.controller != widget.controller) {
+      oldWidget.controller?._detach(_toggleCart);
+      widget.controller?._attach(_toggleCart);
+    }
   }
 
   @override
   void dispose() {
     _overlayEntry?.remove();
     _overlayEntry = null;
+    widget.controller?._detach(_toggleCart);
     super.dispose();
   }
 

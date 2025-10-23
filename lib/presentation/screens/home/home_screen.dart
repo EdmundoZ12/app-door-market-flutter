@@ -5,6 +5,7 @@ import 'package:door_market_app/presentation/components/categories_section_home.
 import 'package:door_market_app/presentation/components/lasts_orders_section_home.dart';
 import 'package:door_market_app/presentation/components/popular_products_section.dart';
 import 'package:door_market_app/presentation/screens/last_order/last_order_screen.dart';
+import 'package:door_market_app/presentation/screens/product_information/product_information_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -99,7 +100,7 @@ class _HomeViewState extends State<_HomeView> {
             future: _popularProductsFuture,
             title: _popularSectionTitle,
             headerImagePath: _popularSectionImage,
-            onProductTap: (product) => print('Tapped on ${product.name}'),
+            onProductTap: _openProductDetail,
             onAddToCart: (product) => print('Add to cart: ${product.name}'),
           ),
         ],
@@ -113,6 +114,17 @@ class _HomeViewState extends State<_HomeView> {
         builder: (context) => LastOrderScreen(
           navigationShell: widget.navigationShell,
           order: order,
+        ),
+      ),
+    );
+  }
+
+  void _openProductDetail(Product product) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => ProductInformationScreen(
+          product: product,
+          navigationShell: widget.navigationShell,
         ),
       ),
     );
