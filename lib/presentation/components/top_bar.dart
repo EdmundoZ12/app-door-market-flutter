@@ -5,8 +5,10 @@ class TopBar extends StatelessWidget {
   final String title;
   final bool showSearch;
   final bool showFilters;
+  // Nuevas propiedades para controlar la visibilidad de Notificación y Carrito
   final bool showNotifications;
-  final bool showCartIcon;
+  final bool showCart;
+
   final VoidCallback? onSearchClick;
   final VoidCallback? onFilterClick;
   final VoidCallback? onNotificationClick;
@@ -17,8 +19,9 @@ class TopBar extends StatelessWidget {
     this.title = 'DoorMarket',
     this.showSearch = true,
     this.showFilters = false,
+    // Asignamos 'true' por defecto a las nuevas propiedades
     this.showNotifications = true,
-    this.showCartIcon = true,
+    this.showCart = true,
     this.onSearchClick,
     this.onFilterClick,
     this.onNotificationClick,
@@ -160,7 +163,7 @@ class TopBar extends StatelessWidget {
 
                       if (showFilters) const SizedBox(width: 4),
 
-                      // Notificaciones
+                      // Notificaciones (ahora condicional)
                       if (showNotifications)
                         IconButton(
                           onPressed: onNotificationClick,
@@ -176,10 +179,20 @@ class TopBar extends StatelessWidget {
                           ),
                         ),
 
-                      if (showCartIcon)
-                        Cart(
-                          cartAssetPath: 'assets/data/cart.json',
-                          onCheckout: onCartClick,
+                      // Carrito (ahora condicional)
+                      if (showCart)
+                        IconButton(
+                          onPressed: onCartClick,
+                          icon: const Icon(
+                            Icons.shopping_cart,
+                            color: Color(0xFFE53935), // Color primary
+                            size: 26,
+                          ),
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(
+                            minWidth: 40,
+                            minHeight: 40,
+                          ),
                         ),
                     ],
                   ),

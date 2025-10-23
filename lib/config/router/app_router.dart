@@ -1,11 +1,30 @@
 import 'package:door_market_app/presentation/components/menu_footer.dart';
+import 'package:door_market_app/presentation/screens/place_order/place_order.dart';
+import 'package:door_market_app/presentation/screens/place_order/select_location_screen.dart';
 import 'package:door_market_app/presentation/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/place-order', // 👈 Cambia esto temporalmente para probar
   routes: [
+    // 👇 RUTA INDEPENDIENTE - Sin menú inferior
+    GoRoute(
+      path: '/place-order',
+      name: PlaceOrder.name,
+      builder: (context, state) => const PlaceOrder(),
+    ),
+    GoRoute(
+      path: '/select-location',
+      name: SelectLocationScreen.name,
+      builder: (context, state) {
+        final LatLng? initialLocation = state.extra as LatLng?;
+        return SelectLocationScreen(initialLocation: initialLocation);
+      },
+    ),
+
+    // 👇 RUTAS CON MENÚ INFERIOR
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         return ScaffoldWithNavBar(navigationShell: navigationShell);

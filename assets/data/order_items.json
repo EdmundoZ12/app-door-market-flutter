@@ -1,0 +1,36 @@
+{
+  "OrderItems": [
+    {
+      "productId": 1,
+      "name": "Hamburguesa Clásica",
+      "description": "Con queso, lechuga y tomate",
+      "quantity": 3,
+      "unitPrice": 15.00,
+      "image": "assets/images/products/hamburguesa.png"
+    },
+    {
+      "productId": 2,
+      "name": "Papas Fritas Grandes",
+      "description": "Porción grande crujiente",
+      "quantity": 1,
+      "unitPrice": 10.00,
+      "image": "assets/images/products/papas.png"
+    },
+    {
+      "productId": 3,
+      "name": "Coca Cola 500ml",
+      "description": "Bebida fría",
+      "quantity": 2,
+      "unitPrice": 5.00,
+      "image": "assets/images/products/coca.png"
+    },
+    {
+      "productId": 4,
+      "name": "Helado de Chocolate",
+      "description": "Postre cremoso",
+      "quantity": 1,
+      "unitPrice": 10.00,
+      "image": "assets/images/products/helado.png"
+    }
+  ]
+}

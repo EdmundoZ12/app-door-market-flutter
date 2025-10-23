@@ -31,15 +31,14 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  geocoding: ^4.0.0
+  geolocator: ^14.0.2
   go_router: ^16.2.5
+  google_maps_flutter: ^2.13.1
   intl: ^0.19.0
+  permission_handler: ^12.0.1
 
 dev_dependencies:
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
@@ -56,6 +55,7 @@ flutter:
   assets:
     - assets/images/carrusel/
     - assets/images/products/
+    - assets/images/profile/
     - assets/images/icons/
     - assets/images/
     - assets/data/
