@@ -92,10 +92,6 @@ class LastOrderItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                Text(
-                  'Pedido: $orderNumber · Estado: ${status.toUpperCase()}',
-                  style: const TextStyle(fontSize: 12, color: Colors.black54),
-                ),
                 const SizedBox(height: 8),
                 Row(
                   children: [
@@ -105,10 +101,10 @@ class LastOrderItem extends StatelessWidget {
                         children: [
                           Text(
                             'Precio: ${item.price.toStringAsFixed(0)} BS',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w600,
-                              color: Theme.of(context).colorScheme.primary,
+                              color: Color(0xFFE53935),
                             ),
                           ),
                           Text(
